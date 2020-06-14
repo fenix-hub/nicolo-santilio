@@ -8,6 +8,12 @@ nav {
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    header {
+        position: absolute;
+    }
+}
+
 /*
 .list-element {
     text-decoration: none;
