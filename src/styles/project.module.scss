@@ -1,0 +1,162 @@
+$bg-color : #1c1f24;
+$footer-color : #5d7086ff;
+
+$text-color : #A2ACBD;
+$text-color-2 : #3E4756;
+$text-color-3 : #445161ff;
+$text-i-color : rgb(183, 198, 214);
+
+$link-color : #A8ABB2;
+$link-color-active :  #2ea889ff;
+$link-color-hover : #8bd47dff;
+
+$title-1 : #8bd47dff;
+$title-2 : #2ea889ff;
+$title-3 : #00777dff;
+
+.projectList {
+    list-style-type: none;
+    margin: 0;
+}
+
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rowBottom {
+    display: flex;
+    align-items: flex-end;
+    flex: 100%;
+    width: 100%;
+}
+
+.column1 {
+    flex: 50%;
+    display: flex;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    padding: 20px 15px 0px 15px;
+}
+
+.separator {
+    margin-bottom: 10px;
+    height: 1px;
+    background-color: $text-color-2;
+    width: 90%;
+}
+
+.thumbnail {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(100%);   
+    //transition: filter 0.5s;
+}
+
+.thumbnail:hover {
+}
+
+.publishedDate {
+    font-style: italic;
+    color: $text-color-3;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.language {
+    font-weight: bold;
+    color: $title-1;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.projectCard {
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 80px;
+    background: #38465e3d;
+    box-shadow: 0 0 20px #1a1824d7;
+    width: 100%;
+    
+    border-radius: 10px;
+    
+    a {
+        text-decoration: none;
+        display: flex;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);   
+        transition: filter 0.5s;
+    }
+    
+    a:hover {
+        color: $text-color;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);   
+        
+        transition: filter 0.5s;
+    }
+    
+    
+    h4 {
+        display: flex;
+        color: white;
+        font-weight: normal;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    p {
+    }
+    
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customButton {
+    color: $text-color-2;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 5px solid $text-color-2;
+    text-decoration: none;
+    
+    transition: color 0.3s, background-image 0.3s;
+}
+
+.customButton:hover {
+    color: white;
+    font-weight: bold;
+    //background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    background-image: linear-gradient(to right, $title-3, $title-2);
+    text-decoration: none;
+    background-clip: border-box;
+    background-origin: border-box;
+    box-shadow: 2px 1000px 1px $bg-color inset;
+
+    transition: color 0.3s, background-image 0.3s;
+}
+
+.customButton:focus {
+    outline: none;
+}

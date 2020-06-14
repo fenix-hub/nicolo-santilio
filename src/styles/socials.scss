@@ -1,0 +1,15 @@
+.socials ul {
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: table;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+.socials li {
+    padding: 10px;
+    display: inline-block;
+}
