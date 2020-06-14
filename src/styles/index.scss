@@ -50,12 +50,14 @@ ul {
 }
 
 
-footer > p {
+footer {
   margin-top: 80px;
   bottom: 0;
   text-align: center;
   width: 100%;
-  color: $text-color-2;
+  p {
+    color: $text-color-2;
+  }
 }
 
 .intestation {
@@ -115,6 +117,29 @@ footer > p {
   min-width: inherit;
 }
 
+
+/*   mobile    */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+
+  .intestation {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .l-content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  footer {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 80%;
+  }
+}
 
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
@@ -691,19 +716,4 @@ html {
   pre tt:before,
   pre tt:after {
     content: "";
-  }
-  @media only screen and (max-width: 768px) {
-    html {
-      font-size: 100%;
-    }
-
-    .intestation {
-      margin-left: 20px;
-    }
-
-    footer {
-      margin-left: 30px;
-      margin-right: 30px;
-      font-size: 80%;
-    }
   }
