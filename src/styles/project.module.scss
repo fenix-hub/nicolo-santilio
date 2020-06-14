@@ -23,14 +23,15 @@ $title-3 : #00777dff;
 .row {
     display: flex;
     justify-content: flex-start;
+    max-height: fit-content;
 }
 
 .rowBottom {
     display: flex;
     align-items: flex-end;
-    flex: 100%;
     width: 100%;
 }
+
 
 .column1 {
     flex: 50%;
@@ -55,6 +56,7 @@ $title-3 : #00777dff;
     padding: 0;
     margin: 0;
     display: flex;
+    object-fit: cover;
 
     //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     //filter: grayscale(100%);   
@@ -99,6 +101,7 @@ $title-3 : #00777dff;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);   
         transition: filter 0.5s;
+        max-height: 250px;
     }
     
     a:hover {
@@ -119,6 +122,9 @@ $title-3 : #00777dff;
     }
 
     p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 100%;
     }
     
 }
