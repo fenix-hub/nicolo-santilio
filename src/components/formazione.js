@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {FaFileDownload} from 'react-icons/fa';
 
 function Formazione() {
     return(
@@ -15,7 +15,9 @@ function Formazione() {
             </p>
             <div className="CV">
                 <p>Vuoi saperne di più sulla mia formazione, esperienze e competenze? Scarica la versione digitale del mio CV.</p>
-                <button type="button" className="customButton">Scarica il CV Digitale</button>
+                <a href={"docs/CV_Nicolò_Santilio.pdf"} download>
+                    <button type="submit" className="customButton"><FaFileDownload className="icon"/> Scarica il CV Digitale</button>
+                </a>
             </div>
             </div>
 
