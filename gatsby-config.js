@@ -9,6 +9,8 @@ module.exports = {
   siteMetadata : {
     title: 'Nicolò Santilio',
     author: 'Nicolò Santilio',
+    siteUrl: 'http://www.nicolosantilio.com',
+    description: 'Nicolò Santilio - Informatica, Robotica, Videogiochi, Arte, Musica.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
