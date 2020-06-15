@@ -9,7 +9,16 @@
     text-align: center;
 }
 
-.socials li {
-    padding: 10px;
-    display: inline-block;
+.socials {
+    text-align: center;
+    font-size: 110%;
+    
+    li {
+        padding: 10px;
+        display: inline-block;
+    }
+
+    text {
+        font-size: 60%;;
+    }
 }

@@ -135,34 +135,3 @@ $title-3 : #00777dff;
     align-items: center;
 }
 
-.customButton {
-    color: $text-color-2;
-    font-weight: bold;
-    background-color: transparent;
-    padding: 5px 15px;
-    border-radius: 20px;
-    border: 5px solid $text-color-2;
-    text-decoration: none;
-    
-    transition: color 0.3s, background-image 0.3s;
-}
-
-.customButton:hover {
-    color: white;
-    font-weight: bold;
-    //background-color: transparent;
-    padding: 5px 15px;
-    border-radius: 20px;
-    border: 5px solid transparent;
-    background-image: linear-gradient(to right, $title-3, $title-2);
-    text-decoration: none;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: 2px 1000px 1px $bg-color inset;
-
-    transition: color 0.3s, background-image 0.3s;
-}
-
-.customButton:focus {
-    outline: none;
-}

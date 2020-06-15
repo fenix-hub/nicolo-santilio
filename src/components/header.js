@@ -22,9 +22,6 @@ function Header() {
                     <li>
                         <a href="/#portfolio">Portfolio</a>
                     </li>
-                    <li>
-                        <a href="/#contatti">Contatti</a>
-                    </li>
                 </ul>
             </nav>
             <Socials/>

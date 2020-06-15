@@ -6,6 +6,7 @@ import '../styles/socials.scss';
 function Socials() {
     return(
     <div className="socials">
+        <text>Social e Contatti</text>
         <ul>
             <li>
                 <a href="https://github.com/fenix-hub" target="_blank" rel="noreferrer"><FaGithub/></a>

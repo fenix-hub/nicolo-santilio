@@ -12,6 +12,7 @@ import Head from '../components/head';
 function Index() {
   return ( 
     <Layout>
+      <p className="hiddenMessage">Scusami, sto ancora creando questo sito, appena avrò tempo inserirò nuovi contenuti!</p>
       <Head title="Home"/>
       <div className="intestation">
         <h3>Ciao, mi chiamo</h3>
@@ -24,7 +25,7 @@ function Index() {
         <About/>
         <Formazione/>
         <Portfolio/>
-        <Contatti/>
+        
       </div>
     </Layout>
   );
