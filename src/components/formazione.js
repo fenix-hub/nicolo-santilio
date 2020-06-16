@@ -14,9 +14,9 @@ function Formazione() {
                 Attualmente mi piacerebbe proseguire la carriera universitaria specializzandomi in ambiti vicini all'<b>Automazione e la Meccatronica</b>, ma ho anche grande interesse per campi più specifici come i <b>Sistemi Cyberfisci e l'Affective Computing</b>.
             </p>
             <div className="CV">
-                <p>Vuoi saperne di più sulla mia formazione, esperienze e competenze? Scarica la versione digitale del mio CV.</p>
-                <a href={"docs/CV_Nicolò_Santilio.pdf"} download>
-                    <button type="submit" className="customButton"><FaFileDownload className="icon"/> Scarica il CV Digitale</button>
+{/*                 <p>Vuoi saperne di più sulla mia formazione, esperienze e competenze? Scarica la versione digitale del mio CV.</p>
+ */}                <a href={"docs/CV_Nicolò_Santilio.pdf"} download>
+                    <button type="submit" className="customButton"><FaFileDownload className="icon"/>  Scarica il CV Digitale</button>
                 </a>
             </div>
             </div>
