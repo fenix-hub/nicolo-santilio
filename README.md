@@ -7,3 +7,5 @@
 <h1 align="center">
   Nicolò Santilio, Gatsby site
 </h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b4faa10-650f-4e1a-a653-0bb9d3953db7/deploy-status)](https://app.netlify.com/sites/nicolosantilio/deploys)
