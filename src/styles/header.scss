@@ -1,3 +1,6 @@
+$link-color : #A8ABB2;
+
+
 header {
     position: fixed;
     left: 30px;
@@ -6,6 +9,12 @@ header {
 
 nav {
     text-align: center;
+}
+
+ul {
+    //list-style-type: square;
+    list-style-type: none;
+    color: $link-color;
 }
 
 @media only screen and (max-width: 768px) {
