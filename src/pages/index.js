@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 import About from '../components/about';
 import Formazione from '../components/formazione';
 import Portfolio from '../components/portfolio';
-import Contatti from '../components/contatti';
 import Head from '../components/head';
 
 function Index() {

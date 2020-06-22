@@ -1,24 +1,33 @@
 $link-color : #A8ABB2;
 
 
-header {
+.customHeader {
     position: fixed;
     left: 30px;
     top: 35%;
 }
 
-nav {
+.customNav {
     text-align: center;
 }
 
-ul {
+.customUl {
     //list-style-type: square;
     list-style-type: none;
     color: $link-color;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+    list-style-position: outside;
+    list-style-image: none;
 }
 
 @media only screen and (max-width: 768px) {
-    header {
+    .customHeader {
         position: absolute;
         visibility: hidden;
         margin: 0;

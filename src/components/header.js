@@ -7,9 +7,9 @@ import '../styles/header.scss';
 
 function Header() {
     return (
-        <header>
-            <nav>
-                <ul>
+        <header className="customHeader">
+            <nav className="customNav">
+                <ul className="customUl">
                     <li>
                         <a href="/#" >Home</a>
                     </li>
