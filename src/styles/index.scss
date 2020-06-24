@@ -22,6 +22,33 @@ html {
   background-color: $bg-color;
 }
 
+.ch1, .ch1 > b {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 75px;
+  line-height: 70px;
+  color: $title-1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ch2  {
+  margin: 0;
+  line-height: 35px;
+  font-size: 40px;
+  color: $title-2;
+  max-width: 750px;
+}
+
+.ch3 {
+  margin: 0;
+  line-height: 30px;
+  font-size: 30px;
+  color: $title-3;
+  font-weight: normal;
+}
+
+
 .customHeader a {
   color: $link-color;
 }
@@ -131,6 +158,33 @@ text {
   text-align: center;
 }
 
+.link-icon {
+  margin-left: 10px;
+  font-size: 22px;
+  color: $text-color !important;
+}
+
+.link-icon:hover {
+  color: $link-color-hover !important;
+}
+
+.returnBtn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 40px;
+  color: $text-color-2;
+}
+
+.articleBtn {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  margin-top: 5px;
+  color: $text-color !important;
+}
+
 .customButton {
   color: $text-color-2;
   font-weight: bold;
@@ -148,6 +202,7 @@ text {
   }
 
 }
+
 
 .customButton:hover {
   color: white;
@@ -661,6 +716,12 @@ html {
   }
   li {
     margin-bottom: calc(1.45rem / 2);
+  }
+  ul li::marker {
+    color: $text-color !important;
+  }
+  ol li::marker {
+    color: $text-color !important;
   }
   ol li {
     padding-left: 0;
