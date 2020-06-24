@@ -32,7 +32,7 @@ export const options = {
         "embedded-asset-block": node => {
             const alt = node.data.target.fields.title['en-US'];
             const src = node.data.target.fields.file['en-US'].url;
-            return <img alt={alt} src={src} with="800px"/>
+            return <img alt={alt} src={src} width="750px"/>
         },
         [BLOCKS.HEADING_3]: (node, children) => <h3 id={children.toString().toLowerCase().split(" ").join("-")}>{children}</h3>,
     },
