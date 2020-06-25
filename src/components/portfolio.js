@@ -55,8 +55,8 @@ function Portfolio() {
                                                 </div> 
                                                 <div className={projectStyle.rowBottom}>
                                                     <text className={projectStyle.language}>{edge.node.language}</text>
-                                                    <a href={edge.node.source} target="_blank" rel="noreferrer"><FaCode className="link-icon"></FaCode></a>
-                                                    <a href={edge.node.preview} target="_blank" rel="noreferrer"><FaEye className="link-icon"></FaEye></a>
+                                                    <a className="link1" href={edge.node.source} target="_blank" rel="noreferrer"><span className="tooltip">Sorgente</span><FaCode className="link-icon"/></a>
+                                                    <a className="link1" href={edge.node.preview} target="_blank" rel="noreferrer"><span className="tooltip">Anteprima</span><FaEye className="link-icon"></FaEye></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,8 +69,8 @@ function Portfolio() {
                                                 </div>
                                                 <div className={projectStyle.rowBottom}>
                                                     <text className={projectStyle.language}>{edge.node.language}</text>
-                                                    <a href={edge.node.source} target="_blank" rel="noreferrer"><FaCode className="link-icon"></FaCode></a>
-                                                    <a href={edge.node.preview} target="_blank" rel="noreferrer"><FaEye className="link-icon"></FaEye></a>
+                                                    <a className="link1" href={edge.node.source} target="_blank" rel="noreferrer"><span className="tooltip">Sorgente</span><FaCode className="link-icon"/></a>
+                                                    <a className="link1" href={edge.node.preview} target="_blank" rel="noreferrer"><span className="tooltip">Anteprima</span><FaEye className="link-icon"></FaEye></a>
                                                 </div>
                                             </div>
                                             <Link to={`/project/${edge.node.slug}`} >

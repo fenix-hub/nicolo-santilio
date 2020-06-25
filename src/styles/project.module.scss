@@ -1,4 +1,4 @@
-$bg-color : #16161D;
+
 $footer-color : #5d7086ff;
 
 $text-color : #A2ACBD;
@@ -25,6 +25,8 @@ $title-3 : #00777dff;
     justify-content: flex-start;
     max-height: fit-content;
     width: 100%;
+    position: relative;
+    z-index: 0;
 }
 
 .rowBottom {
@@ -33,12 +35,16 @@ $title-3 : #00777dff;
     width: 100%;
     padding-bottom: 5px;
     font-size: 80%;
+    position: relative;
+    z-index: 20;
 }
 
 
 .column1 {
     flex: 50%;
     display: flex;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .column2 {
@@ -61,11 +67,14 @@ $title-3 : #00777dff;
     margin: 0;
     display: flex;
     object-fit: cover;
-
+    z-index: -1;
+    position: relative;
+    
     //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     //filter: grayscale(100%);   
     //transition: filter 0.5s;
 }
+
 
 .thumbnail:hover {
 }
@@ -90,7 +99,6 @@ $title-3 : #00777dff;
 
 .projectCard {
     padding: 0;
-    overflow: hidden;
     display: block;
     margin-bottom: 80px;
     background: #38465e3d;
@@ -98,7 +106,7 @@ $title-3 : #00777dff;
     width: 100%;
     min-height: 150px;
     border-radius: 10px;
-    
+
     a {
         text-decoration: none;
         display: flex;

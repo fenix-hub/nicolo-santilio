@@ -161,14 +161,46 @@ text {
   text-align: center;
 }
 
+.link-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .link-icon {
   margin-left: 10px;
   font-size: 22px;
   color: $text-color !important;
 }
 
-.link-icon:hover {
-  color: $link-color-hover !important;
+.link-icon2 {
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: $link-color-active !important;
+}
+
+.link-icon21 {
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-right: 4px;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 25px;
+  left: -13px;
+  padding: 0px 5px 0px;
+  background-color: $bg-color;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.link1:hover {
+  .tooltip {
+    visibility: visible;
+  }
 }
 
 .returnBtn {
@@ -183,8 +215,8 @@ text {
 .articleBtn {
   position: absolute;
   right: 0;
-  margin-right: 5px;
-  margin-top: 5px;
+  margin-right: 7px;
+  margin-top: 7px;
   color: $text-color !important;
 }
 

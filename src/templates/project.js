@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Head from '../components/head';
 import { BLOCKS } from "@contentful/rich-text-types"
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft,  FaEye, FaCode, } from 'react-icons/fa';
 
 
 export const query = graphql`
@@ -46,6 +46,11 @@ function Project(props) {
             <div>
                 <Link to={`/`}><FaArrowLeft className="returnBtn"/></Link>
                 <h1>{props.data.contentfulProject.title}</h1>
+            </div>
+
+            <div className="link-container">
+                <a className="link1" href={props.data.contentfulProject.source} target="_blank" rel="noreferrer"><span className="link-icon2"><FaCode className="link-icon21"/>Sorgente</span></a>
+                <a className="link1" href={props.data.contentfulProject.preview} target="_blank" rel="noreferrer"><span className="link-icon2"><FaEye className="link-icon21"/>Anteprima</span></a>
             </div>
             <div>
                 {documentToReactComponents(props.data.contentfulProject.body.json, options)}
