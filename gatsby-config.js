@@ -12,6 +12,9 @@ module.exports = {
     siteUrl: 'http://www.nicolosantilio.com',
     description: 'Nicolò Santilio - Informatica, Robotica, Videogiochi, Arte, Musica.',
   },
+
+  pathPrefix: "/nicolo-santilio",
+
   plugins: [
     'gatsby-plugin-react-helmet',
     {
