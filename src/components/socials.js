@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaFacebookF, FaGithub, FaLinkedin, FaDiscord, FaEnvelope} from 'react-icons/fa';
+import {FaFacebookF, FaGithub, FaLinkedin, FaDiscord, FaEnvelope, FaSkype} from 'react-icons/fa';
 
 import '../styles/socials.scss';
 
@@ -19,6 +19,9 @@ function Socials() {
             </li>
             <li>
                 <a href="https://discord.gg/JNrcucg" target="_blank" rel="noreferrer"><FaDiscord/></a>
+            </li>
+            <li>
+                <a href="https://join.skype.com/invite/iMJmdMAyjtIQ" target="_blank" rel="noreferrer"><FaSkype/></a>
             </li>
             <li>
                 <a href="mailto:n.santilio97@gmail.com" target="_blank" rel="noreferrer"><FaEnvelope/></a>
