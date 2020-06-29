@@ -33,8 +33,6 @@ function Portfolio() {
                 <h3>Portfolio</h3>
                 <div className="separator"></div>
                 <div className="content">
-                    <p className="hiddenMessage">Questa sezione è ancora in costruzione, poichè vorrei organizzarla e inserire un articolo per ogni mio progetto. Fai riferimento al mio GitHub per ora!</p>
-                    <p>Questi sono alcuni dei miei proggetti, dai un'occhiata.</p>
         
                     <ol className={projectStyle.projectList}>
                     { data.allContentfulProject.edges.map( edge => {
