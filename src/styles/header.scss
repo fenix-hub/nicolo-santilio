@@ -10,13 +10,13 @@ $title-3 : #00777dff;
     height: 100%;
     margin: 0;
     padding-left: 30px;
+    display: inline-table;
 }
 
 .headerContainer {
     margin: 0;
-    top: 50%;
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);  
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .avatarImg {
