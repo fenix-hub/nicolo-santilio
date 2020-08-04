@@ -18,7 +18,7 @@ function Socials() {
                 <a href="https://www.linkedin.com/in/nicolò-santilio-52b714b1/" target="_blank" rel="noreferrer"><FaLinkedin/></a>
             </li>
             <li>
-                <a href="https://discord.gg/JNrcucg" target="_blank" rel="noreferrer"><FaDiscord/></a>
+                <a href="https://discord.gg/KnJGY9S" target="_blank" rel="noreferrer"><FaDiscord/></a>
             </li>
             <li>
                 <a href="https://join.skype.com/invite/iMJmdMAyjtIQ" target="_blank" rel="noreferrer"><FaSkype/></a>
