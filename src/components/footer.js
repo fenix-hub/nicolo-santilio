@@ -15,8 +15,8 @@ function Footer() {
 
     return(
         <footer>
-            <p>Sito web creato con <a href="https://www.gatsbyjs.org" target="_blank" rel="noreferrer">GatsbyJS</a> <b>© 2020-2021 {data.site.siteMetadata.author}</b>
-            <br></br><a href="https://github.com/fenix-hub/nicolo-santilio">Codice sorgente</a> del sito web con licenza MIT</p>
+            <p>Website made with <a href="https://www.gatsbyjs.org" target="_blank" rel="noreferrer">GatsbyJS</a> <b>© 2020-2021 {data.site.siteMetadata.author}</b>
+            <br></br><a href="https://github.com/fenix-hub/nicolo-santilio">Source code</a> with MIT license</p>
         </footer>
     );
 }

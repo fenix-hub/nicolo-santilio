@@ -3,16 +3,15 @@ import React from 'react';
 
 function About() {
     return(
-        <div id="su-di-me" className="l-content-container">
-            <h3>Su di me</h3>
+        <div id="about-me" className="l-content-container">
+            <h3>About Me</h3>
             <div className="separator"></div>
             <div className="content">
-            <p>Ciao, sono Nicolò Santilio, e sono un Ingegnere dell'Automazione, classe '97.</p>
-            <p>Da <i>Isaac Asimov</i> a <i>Masamune Shirow</i>, dall'etica dietro l'<i>intelligenza artificiale</i> fino allo sporco e crudo 
-            <i> cyberpunk</i>, i mondi dell'informatica e della robotica mi hanno sempre appassionato.</p>
-            <p>Mi dedico principalmente alla progettazione e crazione di framework o singole utilities, lì dove lo sviluppo di un particolare applicativo, di una suite o di semplici tools possa risultare utile per qualsiasi utente o programmatore. Cerco sempre di impiegare le mie risorse e conoscenze per offrire alla community, qualsiasi essa sia, prodotti utili, funzionali ed esteticamente piacevoli.</p>
-            <p>La passione per l'acquisizione e la manipolazione dei dati, oltre allo sviluppo di software gestionali (da Ristoranti a Negozi), mi ha spinto anche nel mondo del videogame development, soprattutto attraverso <a href="https://godotengine.org">strumenti opensource</a> a cui contribuisco quasi quotidianamente, sia a livello di operato che di <a href="https://godotengineitalia.com">community</a>.</p>
-            <p>Non mancano, nella mia lista, anche piccoli progetti domestici inerenti al mondo della robotica: da sistemi di irrigazione automatici basati su Arduino per le mie piantine, fino a webserver per test ludici ed analisi con Raspberry.</p>
+            <p>Hi, my name is Nicolò Santilio, and I'm an Automation Engineer, class of '97.</p>
+            <p>From <i>Isaac Asimov</i> to <i>Masamune Shirow</i>, from the ethics behind <i>artificial intelligence</i> to the dirty and raw <i>cyberpunk</i>, the worlds of computer science and robotics have always fascinated me.</p>
+            <p>I'm mainly dedicated to the design and cration of frameworks or single utilities, where the development of a particular application, suite or simple tools could be useful for any user or programmer. I always try to use my resources and knowledge to offer to the community, whatever it is, useful, functional and aesthetically pleasing products.</p>
+            <p>The passion for data acquisition and manipulation, in addition to the development of management software (from Restaurants to Stores), has pushed me also in the world of videogame development, especially through <a href="https://godotengine.org">opensource tools</a> to which I contribute almost daily, both in my work and in <a href="https://godotengineitalia.com">community</a>.</p>
+            <p>Not missing, in my list, also small home projects related to the world of robotics: from automatic irrigation systems based on Arduino for my seedlings, up to webserver for playful testing and analysis with Raspberry.</p>
             </div>
         </div>
     );

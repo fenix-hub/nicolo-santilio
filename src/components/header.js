@@ -15,10 +15,10 @@ function Header() {
                             <a href="/#" >Home</a>
                         </li>
                         <li>
-                            <a href="/#su-di-me">Su di me</a>
+                            <a href="/#about-me">About Me</a>
                         </li>
                         <li>
-                            <a href="/#formazione">Formazione</a>
+                            <a href="/#education">Education</a>
                         </li>
                         <li>
                             <a href="/#portfolio">Portfolio</a>
