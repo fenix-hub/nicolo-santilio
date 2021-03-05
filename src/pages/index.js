@@ -15,7 +15,7 @@ function Index() {
       <div className="intestation">
         <h3 className="ch3">Hi, my name is</h3>
         <h1 className="ch1"><b>Nicolò Santilio</b></h1>
-        <h2 className="ch2">and I do stuff <b>robotics</b> and <b>computer science</b> fields.</h2>
+        <h2 className="ch2">and I do stuff related to <b>robotics</b> and <b>computer science</b>.</h2>
         
       </div>
 
