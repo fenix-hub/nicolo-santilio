@@ -45,6 +45,7 @@ $title-3 : #00777dff;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
+    max-width: 570px;
 }
 
 .column2 {
@@ -52,7 +53,7 @@ $title-3 : #00777dff;
     flex-direction: column;
     flex: 50%;
     padding: 15px 15px 0px 15px;
-    min-width: 370px;
+    min-width: 400px;
 }
 
 .separator {
@@ -69,15 +70,13 @@ $title-3 : #00777dff;
     object-fit: cover;
     z-index: -1;
     position: relative;
+    min-width: 300px;
     
     //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     //filter: grayscale(100%);   
     //transition: filter 0.5s;
 }
 
-
-.thumbnail:hover {
-}
 
 .publishedDate {
     font-style: italic;

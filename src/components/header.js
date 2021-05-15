@@ -8,7 +8,7 @@ function Header() {
     return (
         <header className="customHeader">
             <div className="headerContainer">
-                <img className="avatarImg" src={"/img/avatar.png"} alt="avatar"></img>
+                <img className="avatarImg" src="/img/avatar.png" alt="avatar"></img>
                 <nav className="customNav">
                     <ul className="customUl">
                         <li>

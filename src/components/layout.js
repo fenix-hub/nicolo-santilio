@@ -3,14 +3,14 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 
-import layoutStyle from '../styles/layout.module.scss';
+import {page, container, content} from '../styles/layout.module.scss';
 
 function Layout(props) {
     return(
-        <div className={layoutStyle.page}>
+        <div className={page}>
             <Header/>
-            <div className={layoutStyle.container}>
-                <div className={layoutStyle.content}>
+            <div className={container}>
+                <div className={content}>
                     {props.children}
                 </div>
                 <Footer/>

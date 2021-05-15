@@ -1,11 +1,12 @@
 import React from 'react';
 import LayoutProject from '../components/layout-project';
 import { graphql, Link } from 'gatsby';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Head from '../components/head';
 import { BLOCKS } from "@contentful/rich-text-types"
 import { FaArrowLeft,  FaEye, FaCode, } from 'react-icons/fa';
 import Video from "../components/video";
+
 
 export const query = graphql`
     query($slug: String!) {
@@ -13,7 +14,19 @@ export const query = graphql`
         {
             title
             body {
-                json
+                raw,
+                references {
+                    ... on ContentfulAsset {
+                        id
+                        contentful_id
+                        __typename
+                        file {
+                            url
+                            contentType
+                            fileName
+                        }
+                    }
+                }
             }
             icon {
                 file {
@@ -28,12 +41,13 @@ export const query = graphql`
     }
 `
 
+
 export const options = {
     renderNode :{
-        "embedded-asset-block": node => {
-            const alt = node.data.target.fields?.title['en-US'];
-            const src = node.data.target.fields?.file['en-US'].url;
-            const type = node.data.target.fields?.file['en-US'].contentType;
+        [BLOCKS.EMBEDDED_ASSET]: node => {
+            const alt = node.data.target.file.fileName;
+            const src = node.data.target.file.url;
+            const type = node.data.target.file.contentType;
             if (type === "video/mp4") {
                 return <div align="center">
                 <Video 
@@ -68,7 +82,7 @@ function Project(props) {
             </div>
 
             <div>
-                {documentToReactComponents(props.data.contentfulProject.body.json, options)}
+                {renderRichText(props.data.contentfulProject.body, options)}
             </div>
         </LayoutProject>
     );

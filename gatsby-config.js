@@ -20,6 +20,28 @@ module.exports = {
   pathPrefix: "/nicolo-santilio",
 
   plugins: [
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          "/*": [
+            "Access-Control-Allow-Origin: *",
+            "Cross-Origin-Embedder-Policy: require-corp",
+            "Cross-Origin-Opener-Policy: same-origin"
+          ],
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: [
+          "Access-Control-Allow-Origin: *",
+          "Cross-Origin-Embedder-Policy: require-corp",
+          "Cross-Origin-Opener-Policy: same-origin"
+        ], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
@@ -43,23 +65,33 @@ module.exports = {
         path: `${__dirname}/static/img/`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'apps',
+        path: `${__dirname}/static/apps/`
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve:'gatsby-transformer-remark',
-      options : {
+      resolve: `gatsby-transformer-remark`,
+      options: {
         plugins: [
-          'gatsby-remark-relative-images',
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-relative-images`,
             options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              staticFolderName: 'static',
+              include: ['featured'],
+              exclude: ['featured.skip'],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: { maxWidth: 720 },
+          },
+        ],
+      },
     },
-
   ],
 }

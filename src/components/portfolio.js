@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import projectStyle from '../styles/project.module.scss';
+import { language, projectList, projectCard, row, rowBottom, column1, column2, description, thumbnail } from '../styles/project.module.scss';
 import { FaBookOpen, FaEye, FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 
 function Portfolio() {
      const data = useStaticQuery(graphql`
         query {
-            allContentfulProject {
+            allContentfulProject (filter: {thumbnail: {id: {ne: null} } }) {
                 edges {
                     node {
                         title
@@ -34,46 +34,46 @@ function Portfolio() {
                 <div className="separator"></div>
                 <div className="content">
         
-                    <ol className={projectStyle.projectList}>
+                    <ol className={projectList}>
                     { data.allContentfulProject.edges.map( edge => {
                         return(
-                            <li className={projectStyle.projectCard}>
+                            <li className={projectCard}>
                                     { counter()                                          
-                                    ? <div className={projectStyle.row}>
+                                    ? <div className={row}>
                                         <Link to={`/project/${edge.node.slug}`} >
-                                            <div className={projectStyle.column1}>
-                                                <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={projectStyle.thumbnail}/>
+                                            <div className={column1}>
+                                                <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
                                                 <FaExternalLinkAlt className="articleBtn"></FaExternalLinkAlt>
                                             </div>
                                         </Link>
-                                            <div className={projectStyle.column2}>
+                                            <div className={column2}>
                                                 <h4> {edge.node.title} </h4>
-                                                <div className={projectStyle.description}>
+                                                <div className={description}>
                                                 { edge.node.description !== null && <p>{edge.node.description.childMarkdownRemark.rawMarkdownBody}</p> }
                                                 </div> 
-                                                <div className={projectStyle.rowBottom}>
-                                                    <text className={projectStyle.language}>{edge.node.language}</text>
+                                                <div className={rowBottom}>
+                                                    <text className={language}>{edge.node.language}</text>
                                                     <a className="link1" href={edge.node.source} target="_blank" rel="noreferrer"><span className="tooltip">Source</span><FaCode className="link-icon"/></a>
                                                     <a className="link1" href={edge.node.preview} target="_blank" rel="noreferrer"><span className="tooltip">Preview</span><FaEye className="link-icon"></FaEye></a>
                                                 </div>
                                             </div>
                                         </div>
-                                    : <div className={projectStyle.row}>
-                                            <div className={projectStyle.column2}>
+                                    : <div className={row}>
+                                            <div className={column2}>
                                                 <h4> {edge.node.title} </h4>
                                                 
-                                                <div className={projectStyle.description}>
+                                                <div className={description}>
                                                 { edge.node.description !== null && <p>{edge.node.description.childMarkdownRemark.rawMarkdownBody}</p> }
                                                 </div>
-                                                <div className={projectStyle.rowBottom}>
-                                                    <text className={projectStyle.language}>{edge.node.language}</text>
+                                                <div className={rowBottom}>
+                                                    <text className={language}>{edge.node.language}</text>
                                                     <a className="link1" href={edge.node.source} target="_blank" rel="noreferrer"><span className="tooltip">Source</span><FaCode className="link-icon"/></a>
                                                     <a className="link1" href={edge.node.preview} target="_blank" rel="noreferrer"><span className="tooltip">Preview</span><FaEye className="link-icon"></FaEye></a>
                                                 </div>
                                             </div>
                                             <Link to={`/project/${edge.node.slug}`} >
-                                                <div className={projectStyle.column1}>
-                                                    <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={projectStyle.thumbnail}/>
+                                                <div className={column1}>
+                                                    <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
                                                     <FaExternalLinkAlt className="articleBtn"></FaExternalLinkAlt>
                                                 </div>
                                             </Link>
