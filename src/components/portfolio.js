@@ -42,7 +42,7 @@ function Portfolio() {
                                     ? <div className={row}>
                                         <Link to={`/project/${edge.node.slug}`} >
                                             <div className={column1}>
-                                                <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
+                                                <img src={edge.node.thumbnail ? "http:"+edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
                                                 <FaExternalLinkAlt className="articleBtn"></FaExternalLinkAlt>
                                             </div>
                                         </Link>
