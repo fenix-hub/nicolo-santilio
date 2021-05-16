@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { language, projectList, projectCard, row, rowBottom, column1, column2, description, thumbnail } from '../styles/project.module.scss';
 import { FaBookOpen, FaEye, FaCode, FaExternalLinkAlt } from 'react-icons/fa';
-import Img from 'gatsby-image';
+
 
 function Portfolio() {
      const data = useStaticQuery(graphql`
@@ -15,9 +15,8 @@ function Portfolio() {
                         slug
                         language
                         thumbnail {
-                            fluid(quality: 100, resizingBehavior: FILL)  {
-                                src
-                                sizes
+                            file {
+                                url
                             }
                         }
                         license
@@ -43,7 +42,7 @@ function Portfolio() {
                                     ? <div className={row}>
                                         <Link to={`/project/${edge.node.slug}`} >
                                             <div className={column1}>
-                                                <Img fluid={edge.node.thumbnail.fluid} className={thumbnail}/>
+                                                <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
                                                 <FaExternalLinkAlt className="articleBtn"></FaExternalLinkAlt>
                                             </div>
                                         </Link>
@@ -74,7 +73,7 @@ function Portfolio() {
                                             </div>
                                             <Link to={`/project/${edge.node.slug}`} >
                                                 <div className={column1}>
-                                                    <Img fluid={edge.node.thumbnail.fluid} className={thumbnail}/>
+                                                    <img src={edge.node.thumbnail ? edge.node.thumbnail.file.url : ""} alt={edge.node.slug} className={thumbnail}/>
                                                     <FaExternalLinkAlt className="articleBtn"></FaExternalLinkAlt>
                                                 </div>
                                             </Link>
