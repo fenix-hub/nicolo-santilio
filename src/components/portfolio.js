@@ -11,7 +11,7 @@ function Portfolio() {
                 edges {
                     node {
                         title
-                        description { childMarkdownRemark { rawMarkdownBody } }
+                        description { description }
                         slug
                         language
                         thumbnail {
@@ -49,7 +49,7 @@ function Portfolio() {
                                             <div className={column2}>
                                                 <h4> {edge.node.title} </h4>
                                                 <div className={description}>
-                                                { edge.node.description !== null && <p>{edge.node.description.childMarkdownRemark.rawMarkdownBody}</p> }
+                                                <p> { edge.node.description !== null ? edge.node.description.description : "" } </p>
                                                 </div> 
                                                 <div className={rowBottom}>
                                                     <text className={language}>{edge.node.language}</text>
@@ -63,7 +63,7 @@ function Portfolio() {
                                                 <h4> {edge.node.title} </h4>
                                                 
                                                 <div className={description}>
-                                                { edge.node.description !== null && <p>{edge.node.description.childMarkdownRemark.rawMarkdownBody}</p> }
+                                                <p> { edge.node.description !== null ? edge.node.description.description : "" } </p>
                                                 </div>
                                                 <div className={rowBottom}>
                                                     <text className={language}>{edge.node.language}</text>

@@ -1,5 +1,6 @@
 const path = require('path');
 
+
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const projectTemplate = path.resolve('./src/templates/project.js');

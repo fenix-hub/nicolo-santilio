@@ -74,24 +74,5 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              staticFolderName: 'static',
-              include: ['featured'],
-              exclude: ['featured.skip'],
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: { maxWidth: 720 },
-          },
-        ],
-      },
-    },
   ],
 }
