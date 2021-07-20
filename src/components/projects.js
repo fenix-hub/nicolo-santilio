@@ -4,7 +4,7 @@ import { language, projectList, projectCard, row, rowBottom, column1, column2, d
 import { FaBookOpen, FaEye, FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 
-function Portfolio() {
+function Projects() {
      const data = useStaticQuery(graphql`
         query {
             allContentfulProject (filter: {thumbnail: {id: {ne: null} } }) {
@@ -29,8 +29,8 @@ function Portfolio() {
     `)
     
     return(
-            <div id="portfolio" className="l-content-container">
-                <h3>Portfolio</h3>
+            <div id="Projects" className="l-content-container">
+                <h3>Projects</h3>
                 <div className="separator"></div>
                 <div className="content">
         
@@ -85,8 +85,9 @@ function Portfolio() {
                     </ol>
                 </div>
                 <div className="CV">
-{/*                 <p></p>*/}                
-                    <button type="submit" className="customButton"><FaBookOpen className="icon"/>  Sfoglia il portfolio</button>
+                    <a href="/portfolio">
+                        <button type="submit" className="customButton"><FaBookOpen className="icon"/>  Browse my Projects</button>
+                    </a>
                 </div>
             </div>
         );
@@ -104,4 +105,4 @@ function counter() {
     }
 }
 
-export default Portfolio;
+export default Projects;

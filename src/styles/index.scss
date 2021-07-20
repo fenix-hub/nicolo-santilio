@@ -100,6 +100,15 @@ footer {
   width: 220px;
 }
 
+.content-container {
+  
+  //padding-right: 100px;
+  padding-bottom: 350px;
+  max-width: 1500px;
+  padding-top: 80px;
+  min-width: 250px;
+}
+
 .l-content-container {
   padding-left: 30px;
   //padding-right: 100px;
@@ -190,7 +199,7 @@ text {
   visibility: hidden;
   position: absolute;
   bottom: 25px;
-  left: -13px;
+  left: -0.5em;
   padding: 0px 5px 0px;
   background-color: $bg-color;
   border-radius: 6px;

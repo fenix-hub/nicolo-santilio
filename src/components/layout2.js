@@ -4,13 +4,13 @@ import Header from './header';
 import Footer from './footer';
 import Scroll from './menuBtn'
 
-import {page, container, content} from '../styles/layout.module.scss';
+import {page, container, content} from '../styles/layout2.module.scss';
 
-function Layout(props) {
+function Layout2(props) {
     return(
         <div className={page}>
             <Header/>
-            <Scroll/>  
+            <Scroll/>
             <div className={container}>
                 <div className={content}>
                     {props.children}
@@ -21,4 +21,4 @@ function Layout(props) {
     );
 }
 
-export default Layout;
+export default Layout2;

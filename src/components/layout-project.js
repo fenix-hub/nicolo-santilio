@@ -8,7 +8,6 @@ import {page, container, content} from '../styles/layout-project.module.scss';
 function LayoutProject(props) {
     return(
         <div className={page}>
-            <Header/>
             <div className={container}>
                 <div className={content}>
                     {props.children}

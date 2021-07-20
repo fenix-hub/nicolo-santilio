@@ -70,7 +70,7 @@ function Project(props) {
     return (
         <LayoutProject>
             <Head title={props.data.contentfulProject.title}/>
-            <img src={props.data.contentfulProject.icon!=null ? props.data.contentfulProject.icon.file.url : ""} alt={props.data.contentfulProject.icon!=null ? props.data.contentfulProject.icon.title : ""} />
+            <img src={props.data.contentfulProject.icon!=null ? props.data.contentfulProject.icon.file.url : ""} alt={props.data.contentfulProject.icon!=null ? props.data.contentfulProject.icon.title : ""} id="project-logo"/>
             <div>
                 <Link to={`/`}><FaArrowLeft className="returnBtn"/></Link>
                 <h1>{props.data.contentfulProject.title}</h1>
