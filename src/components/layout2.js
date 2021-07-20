@@ -9,7 +9,6 @@ import {page, container, content} from '../styles/layout2.module.scss';
 function Layout2(props) {
     return(
         <div className={page}>
-            <Header/>
             <Scroll/>
             <div className={container}>
                 <div className={content}>

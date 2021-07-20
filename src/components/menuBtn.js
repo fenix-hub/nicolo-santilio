@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import Header from './header';
 
 const useStyles = makeStyles((theme) => ({
     toTop: {
@@ -29,19 +30,13 @@ const useStyles = makeStyles((theme) => ({
 const Scroll = () => {
 
     const classes = useStyles();
-
-    
-    const handleClick = () => {
-        var header = document.getElementById("customHeader");
-        header = document.getElementById("customHeader");
-        header.style.visibility = (header.style.visibility === 'hidden' ? 'visible' : 'hidden')
-    }
-
+    const [visible, setVisible] = useState(true)
     return (
         <div>
-            <IconButton onClick={handleClick} className={classes.toTop} aria-label="to top" component="span">
+            <IconButton onClick={() => setVisible(!visible)} className={classes.toTop} aria-label="to top" component="span">
                 <MenuIcon />
             </IconButton>
+            {!visible && <Header/>}
         </div>
     )
 }

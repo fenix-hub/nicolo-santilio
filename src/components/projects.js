@@ -7,7 +7,7 @@ import { FaBookOpen, FaEye, FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 function Projects() {
      const data = useStaticQuery(graphql`
         query {
-            allContentfulProject (filter: {thumbnail: {id: {ne: null} } }) {
+            allContentfulProject (filter: {thumbnail: {id: {ne: null} } }, limit: 5) {
                 edges {
                     node {
                         title
@@ -30,7 +30,7 @@ function Projects() {
     
     return(
             <div id="Projects" className="l-content-container">
-                <h3>Projects</h3>
+                <h3>Last 5 Projects I've worked on...</h3>
                 <div className="separator"></div>
                 <div className="content">
         
